@@ -1,0 +1,518 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		34D6CA881BA8B5C9000355BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D6CA871BA8B5C9000355BF /* AppDelegate.swift */; };
+		34D6CA8A1BA8B5C9000355BF /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 34D6CA891BA8B5C9000355BF /* GameScene.sks */; };
+		34D6CA8C1BA8B5C9000355BF /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D6CA8B1BA8B5C9000355BF /* GameScene.swift */; };
+		34D6CA8E1BA8B5C9000355BF /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D6CA8D1BA8B5C9000355BF /* GameViewController.swift */; };
+		34D6CA911BA8B5C9000355BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34D6CA8F1BA8B5C9000355BF /* Main.storyboard */; };
+		34D6CA931BA8B5C9000355BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34D6CA921BA8B5C9000355BF /* Assets.xcassets */; };
+		34D6CA961BA8B5C9000355BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34D6CA941BA8B5C9000355BF /* LaunchScreen.storyboard */; };
+		34D6CAA11BA8B5C9000355BF /* HanoiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D6CAA01BA8B5C9000355BF /* HanoiTests.swift */; };
+		34D6CAAC1BA8B5C9000355BF /* HanoiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D6CAAB1BA8B5C9000355BF /* HanoiUITests.swift */; };
+		34D6CABA1BA8E0C3000355BF /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D6CAB91BA8E0C3000355BF /* StartScreenViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		34D6CA9D1BA8B5C9000355BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34D6CA7C1BA8B5C9000355BF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34D6CA831BA8B5C9000355BF;
+			remoteInfo = Hanoi;
+		};
+		34D6CAA81BA8B5C9000355BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34D6CA7C1BA8B5C9000355BF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34D6CA831BA8B5C9000355BF;
+			remoteInfo = Hanoi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		34D6CA841BA8B5C9000355BF /* Hanoi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hanoi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		34D6CA871BA8B5C9000355BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		34D6CA891BA8B5C9000355BF /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		34D6CA8B1BA8B5C9000355BF /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		34D6CA8D1BA8B5C9000355BF /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		34D6CA901BA8B5C9000355BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		34D6CA921BA8B5C9000355BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		34D6CA951BA8B5C9000355BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		34D6CA971BA8B5C9000355BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34D6CA9C1BA8B5C9000355BF /* HanoiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HanoiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		34D6CAA01BA8B5C9000355BF /* HanoiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HanoiTests.swift; sourceTree = "<group>"; };
+		34D6CAA21BA8B5C9000355BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34D6CAA71BA8B5C9000355BF /* HanoiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HanoiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		34D6CAAB1BA8B5C9000355BF /* HanoiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HanoiUITests.swift; sourceTree = "<group>"; };
+		34D6CAAD1BA8B5C9000355BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34D6CAB91BA8E0C3000355BF /* StartScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		34D6CA811BA8B5C9000355BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34D6CA991BA8B5C9000355BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34D6CAA41BA8B5C9000355BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		34D6CA7B1BA8B5C9000355BF = {
+			isa = PBXGroup;
+			children = (
+				34D6CA861BA8B5C9000355BF /* Hanoi */,
+				34D6CA9F1BA8B5C9000355BF /* HanoiTests */,
+				34D6CAAA1BA8B5C9000355BF /* HanoiUITests */,
+				34D6CA851BA8B5C9000355BF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		34D6CA851BA8B5C9000355BF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				34D6CA841BA8B5C9000355BF /* Hanoi.app */,
+				34D6CA9C1BA8B5C9000355BF /* HanoiTests.xctest */,
+				34D6CAA71BA8B5C9000355BF /* HanoiUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		34D6CA861BA8B5C9000355BF /* Hanoi */ = {
+			isa = PBXGroup;
+			children = (
+				34D6CA871BA8B5C9000355BF /* AppDelegate.swift */,
+				34D6CA891BA8B5C9000355BF /* GameScene.sks */,
+				34D6CA8B1BA8B5C9000355BF /* GameScene.swift */,
+				34D6CA8D1BA8B5C9000355BF /* GameViewController.swift */,
+				34D6CA8F1BA8B5C9000355BF /* Main.storyboard */,
+				34D6CA921BA8B5C9000355BF /* Assets.xcassets */,
+				34D6CA941BA8B5C9000355BF /* LaunchScreen.storyboard */,
+				34D6CA971BA8B5C9000355BF /* Info.plist */,
+				34D6CAB91BA8E0C3000355BF /* StartScreenViewController.swift */,
+			);
+			path = Hanoi;
+			sourceTree = "<group>";
+		};
+		34D6CA9F1BA8B5C9000355BF /* HanoiTests */ = {
+			isa = PBXGroup;
+			children = (
+				34D6CAA01BA8B5C9000355BF /* HanoiTests.swift */,
+				34D6CAA21BA8B5C9000355BF /* Info.plist */,
+			);
+			path = HanoiTests;
+			sourceTree = "<group>";
+		};
+		34D6CAAA1BA8B5C9000355BF /* HanoiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				34D6CAAB1BA8B5C9000355BF /* HanoiUITests.swift */,
+				34D6CAAD1BA8B5C9000355BF /* Info.plist */,
+			);
+			path = HanoiUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		34D6CA831BA8B5C9000355BF /* Hanoi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34D6CAB01BA8B5C9000355BF /* Build configuration list for PBXNativeTarget "Hanoi" */;
+			buildPhases = (
+				34D6CA801BA8B5C9000355BF /* Sources */,
+				34D6CA811BA8B5C9000355BF /* Frameworks */,
+				34D6CA821BA8B5C9000355BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Hanoi;
+			productName = Hanoi;
+			productReference = 34D6CA841BA8B5C9000355BF /* Hanoi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		34D6CA9B1BA8B5C9000355BF /* HanoiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34D6CAB31BA8B5C9000355BF /* Build configuration list for PBXNativeTarget "HanoiTests" */;
+			buildPhases = (
+				34D6CA981BA8B5C9000355BF /* Sources */,
+				34D6CA991BA8B5C9000355BF /* Frameworks */,
+				34D6CA9A1BA8B5C9000355BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				34D6CA9E1BA8B5C9000355BF /* PBXTargetDependency */,
+			);
+			name = HanoiTests;
+			productName = HanoiTests;
+			productReference = 34D6CA9C1BA8B5C9000355BF /* HanoiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		34D6CAA61BA8B5C9000355BF /* HanoiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34D6CAB61BA8B5C9000355BF /* Build configuration list for PBXNativeTarget "HanoiUITests" */;
+			buildPhases = (
+				34D6CAA31BA8B5C9000355BF /* Sources */,
+				34D6CAA41BA8B5C9000355BF /* Frameworks */,
+				34D6CAA51BA8B5C9000355BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				34D6CAA91BA8B5C9000355BF /* PBXTargetDependency */,
+			);
+			name = HanoiUITests;
+			productName = HanoiUITests;
+			productReference = 34D6CAA71BA8B5C9000355BF /* HanoiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		34D6CA7C1BA8B5C9000355BF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Matthew Irvine";
+				TargetAttributes = {
+					34D6CA831BA8B5C9000355BF = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					34D6CA9B1BA8B5C9000355BF = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 34D6CA831BA8B5C9000355BF;
+					};
+					34D6CAA61BA8B5C9000355BF = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 34D6CA831BA8B5C9000355BF;
+					};
+				};
+			};
+			buildConfigurationList = 34D6CA7F1BA8B5C9000355BF /* Build configuration list for PBXProject "Hanoi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 34D6CA7B1BA8B5C9000355BF;
+			productRefGroup = 34D6CA851BA8B5C9000355BF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				34D6CA831BA8B5C9000355BF /* Hanoi */,
+				34D6CA9B1BA8B5C9000355BF /* HanoiTests */,
+				34D6CAA61BA8B5C9000355BF /* HanoiUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		34D6CA821BA8B5C9000355BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34D6CA8A1BA8B5C9000355BF /* GameScene.sks in Resources */,
+				34D6CA961BA8B5C9000355BF /* LaunchScreen.storyboard in Resources */,
+				34D6CA931BA8B5C9000355BF /* Assets.xcassets in Resources */,
+				34D6CA911BA8B5C9000355BF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34D6CA9A1BA8B5C9000355BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34D6CAA51BA8B5C9000355BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		34D6CA801BA8B5C9000355BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34D6CA8C1BA8B5C9000355BF /* GameScene.swift in Sources */,
+				34D6CA8E1BA8B5C9000355BF /* GameViewController.swift in Sources */,
+				34D6CA881BA8B5C9000355BF /* AppDelegate.swift in Sources */,
+				34D6CABA1BA8E0C3000355BF /* StartScreenViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34D6CA981BA8B5C9000355BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34D6CAA11BA8B5C9000355BF /* HanoiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34D6CAA31BA8B5C9000355BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34D6CAAC1BA8B5C9000355BF /* HanoiUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		34D6CA9E1BA8B5C9000355BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 34D6CA831BA8B5C9000355BF /* Hanoi */;
+			targetProxy = 34D6CA9D1BA8B5C9000355BF /* PBXContainerItemProxy */;
+		};
+		34D6CAA91BA8B5C9000355BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 34D6CA831BA8B5C9000355BF /* Hanoi */;
+			targetProxy = 34D6CAA81BA8B5C9000355BF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		34D6CA8F1BA8B5C9000355BF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				34D6CA901BA8B5C9000355BF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		34D6CA941BA8B5C9000355BF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				34D6CA951BA8B5C9000355BF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		34D6CAAE1BA8B5C9000355BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		34D6CAAF1BA8B5C9000355BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		34D6CAB11BA8B5C9000355BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Hanoi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mattirv.Hanoi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		34D6CAB21BA8B5C9000355BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Hanoi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mattirv.Hanoi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		34D6CAB41BA8B5C9000355BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HanoiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mattirv.HanoiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hanoi.app/Hanoi";
+			};
+			name = Debug;
+		};
+		34D6CAB51BA8B5C9000355BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HanoiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mattirv.HanoiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hanoi.app/Hanoi";
+			};
+			name = Release;
+		};
+		34D6CAB71BA8B5C9000355BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HanoiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mattirv.HanoiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Hanoi;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		34D6CAB81BA8B5C9000355BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HanoiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mattirv.HanoiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Hanoi;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		34D6CA7F1BA8B5C9000355BF /* Build configuration list for PBXProject "Hanoi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34D6CAAE1BA8B5C9000355BF /* Debug */,
+				34D6CAAF1BA8B5C9000355BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34D6CAB01BA8B5C9000355BF /* Build configuration list for PBXNativeTarget "Hanoi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34D6CAB11BA8B5C9000355BF /* Debug */,
+				34D6CAB21BA8B5C9000355BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		34D6CAB31BA8B5C9000355BF /* Build configuration list for PBXNativeTarget "HanoiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34D6CAB41BA8B5C9000355BF /* Debug */,
+				34D6CAB51BA8B5C9000355BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		34D6CAB61BA8B5C9000355BF /* Build configuration list for PBXNativeTarget "HanoiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34D6CAB71BA8B5C9000355BF /* Debug */,
+				34D6CAB81BA8B5C9000355BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 34D6CA7C1BA8B5C9000355BF /* Project object */;
+}

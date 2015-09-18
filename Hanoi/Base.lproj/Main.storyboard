@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="15A216g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1Pa-Rd-cWO">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="Hanoi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
+                        <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Start Screen View Controller-->
+        <scene sceneID="STp-5e-SX6">
+            <objects>
+                <viewController id="1Pa-Rd-cWO" customClass="StartScreenViewController" customModule="Hanoi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="h8G-YU-qya"/>
+                        <viewControllerLayoutGuide type="bottom" id="To7-L1-6xo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fNj-mX-jc1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Tower of Hanoi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egZ-BX-MNd" userLabel="TitleLabel">
+                                <rect key="frame" x="178" y="28" width="244" height="82"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Spaceship" translatesAutoresizingMaskIntoConstraints="NO" id="ctI-PP-VWA" userLabel="MainImage">
+                                <rect key="frame" x="178" y="118" width="244" height="159"/>
+                                <animations/>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="1" maxValue="8" translatesAutoresizingMaskIntoConstraints="NO" id="zwa-pv-xvt" userLabel="DiscSlider">
+                                <rect key="frame" x="176" y="285" width="248" height="31"/>
+                                <animations/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Number of Discs: 4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yw-fc-y5b">
+                                <rect key="frame" x="178" y="323" width="244" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDX-TA-JNq" userLabel="PlayButton">
+                                <rect key="frame" x="178" y="352" width="244" height="199"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <segue destination="BV1-FR-VrT" kind="show" identifier="SegueToGame" id="bmI-hb-3gS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Designed by Matt Irvine" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bc0-YG-J0N" userLabel="DesignedLabel">
+                                <rect key="frame" x="178" y="559" width="244" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ctI-PP-VWA" firstAttribute="leading" secondItem="fNj-mX-jc1" secondAttribute="leadingMargin" constant="40" id="12K-Pc-7Yx"/>
+                            <constraint firstItem="zwa-pv-xvt" firstAttribute="leading" secondItem="fNj-mX-jc1" secondAttribute="leadingMargin" constant="40" id="2wC-xI-rPi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zwa-pv-xvt" secondAttribute="trailing" constant="40" id="5WV-TO-z4t"/>
+                            <constraint firstItem="Bc0-YG-J0N" firstAttribute="centerX" secondItem="fNj-mX-jc1" secondAttribute="centerX" id="70i-9W-UR0"/>
+                            <constraint firstItem="To7-L1-6xo" firstAttribute="top" secondItem="Bc0-YG-J0N" secondAttribute="bottom" constant="20" id="Asj-Sq-TU4"/>
+                            <constraint firstItem="ctI-PP-VWA" firstAttribute="top" secondItem="egZ-BX-MNd" secondAttribute="bottom" constant="20" id="F4p-3A-6YR"/>
+                            <constraint firstItem="egZ-BX-MNd" firstAttribute="centerX" secondItem="fNj-mX-jc1" secondAttribute="centerX" id="MVW-Kr-trI"/>
+                            <constraint firstItem="mDX-TA-JNq" firstAttribute="top" secondItem="0yw-fc-y5b" secondAttribute="bottom" constant="8" id="NFW-q3-hCl"/>
+                            <constraint firstItem="zwa-pv-xvt" firstAttribute="centerY" secondItem="fNj-mX-jc1" secondAttribute="centerY" id="QiV-6k-hMO"/>
+                            <constraint firstItem="ctI-PP-VWA" firstAttribute="centerX" secondItem="fNj-mX-jc1" secondAttribute="centerX" id="TZ7-OE-Q1U"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ctI-PP-VWA" secondAttribute="trailing" constant="40" id="ZXa-R3-4aG"/>
+                            <constraint firstItem="egZ-BX-MNd" firstAttribute="top" secondItem="h8G-YU-qya" secondAttribute="bottom" constant="20" id="dve-Cq-hTb"/>
+                            <constraint firstItem="zwa-pv-xvt" firstAttribute="centerX" secondItem="fNj-mX-jc1" secondAttribute="centerX" id="hAv-Un-uua"/>
+                            <constraint firstItem="Bc0-YG-J0N" firstAttribute="top" secondItem="mDX-TA-JNq" secondAttribute="bottom" constant="8" id="iMo-NR-euQ"/>
+                            <constraint firstItem="mDX-TA-JNq" firstAttribute="centerX" secondItem="fNj-mX-jc1" secondAttribute="centerX" id="mjs-ns-pgY"/>
+                            <constraint firstItem="0yw-fc-y5b" firstAttribute="top" secondItem="zwa-pv-xvt" secondAttribute="bottom" constant="8" id="mtB-vF-T0D"/>
+                            <constraint firstItem="0yw-fc-y5b" firstAttribute="centerX" secondItem="fNj-mX-jc1" secondAttribute="centerX" id="sZd-cH-e39"/>
+                            <constraint firstItem="zwa-pv-xvt" firstAttribute="top" secondItem="ctI-PP-VWA" secondAttribute="bottom" constant="20" id="zqW-sx-ciN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="DiscNumberLabel" destination="0yw-fc-y5b" id="QEU-ow-SoT"/>
+                        <outlet property="DiscSlider" destination="zwa-pv-xvt" id="pAH-wG-DCa"/>
+                        <outlet property="playButton" destination="mDX-TA-JNq" id="dpH-KR-twF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V2o-qE-FCc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="330" y="1054"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Spaceship" width="394" height="347"/>
+    </resources>
+</document>
