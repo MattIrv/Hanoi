@@ -15,19 +15,35 @@ class GameScene: SKScene {
     static let baseWidthFraction: CGFloat = 1.0 / 5.0
     static let baseFillColor = UIColor.brownColor()
     static let baseStrokeColor = UIColor.blackColor()
+    static let discCornerRadius: CGFloat = 5.0
+    static let xPositionMultipliers: Array<CGFloat> = [1.0, 2.5, 4.0]
+    static let discWidthFraction: CGFloat = 0.95
+    static let discHeightFraction: CGFloat = baseHeightFraction * 2.6
     
     var discs: Array<Disc>!
-    var bases: Array<SKShapeNode>!
+    var bases: Array<Base>!
     
     class Disc: NSObject {
         var color: UIColor
         var size: Int
         var base: Int
+        var node: SKShapeNode?
         
         init(color: UIColor, size: Int) {
             self.color = color
             self.size = size
-            self.base = 1
+            self.base = 0
+            self.node = nil
+        }
+    }
+    
+    class Base: NSObject {
+        var node: SKShapeNode?
+        var discStack: [Disc]
+        
+        init(node: SKShapeNode) {
+            self.node = node
+            self.discStack = []
         }
     }
     
@@ -64,7 +80,10 @@ class GameScene: SKScene {
         let colors = [UIColor.redColor(), UIColor.orangeColor(), UIColor.blueColor(), UIColor.purpleColor(), UIColor.cyanColor(), UIColor.greenColor(), UIColor.yellowColor(), UIColor.lightGrayColor()]
         var discs = [Disc]()
         for (i, color) in colors.enumerate() {
-            discs.append(Disc(color: color, size: i + 1))
+            if i == discCount {
+                break
+            }
+            discs.append(Disc(color: color, size: 8 - i))
         }
         self.discs = discs
     }
@@ -72,7 +91,7 @@ class GameScene: SKScene {
     private func setupBases() {
         let maxX = CGRectGetMaxX(self.frame)
         let maxY = CGRectGetMaxY(self.frame)
-        let xPositionMultipliers: Array<CGFloat> = [1.0, 2.5, 4.0]
+        let xPositionMultipliers = GameScene.xPositionMultipliers
         
         let baseWidth = maxX * GameScene.baseWidthFraction
         let baseHeight = maxY * GameScene.baseHeightFraction
@@ -86,10 +105,35 @@ class GameScene: SKScene {
             node.strokeColor = GameScene.baseStrokeColor
             self.addChild(node)
         }
-        self.bases = baseNodes
+        self.bases = baseNodes.map { Base(node: $0) }
     }
     
     private func setupDiscs() {
+        let maxX = CGRectGetMaxX(self.frame)
+        let maxY = CGRectGetMaxY(self.frame)
+        let baseWidth = maxX * GameScene.baseWidthFraction
+        let baseHeight = maxY * GameScene.baseHeightFraction
+        let xPositionMultipliers = GameScene.xPositionMultipliers
+        let discHeight = GameScene.discHeightFraction * maxY
+        let discs = self.discs.sort { (disc1, disc2) -> Bool in
+            disc1.size > disc2.size
+        }
         
+        for disc in discs {
+            let baseNum = disc.base
+            let base = self.bases[baseNum]
+            let discPositionInStack = base.discStack.count
+            base.discStack.append(disc)
+            let discWidth = GameScene.discWidthFraction * baseWidth * CGFloat(disc.size) / 8.0
+            let xPosition = xPositionMultipliers[baseNum] * maxX * GameScene.baseXDistanceFraction - (discWidth / 2.0)
+            let baseYPosition = GameScene.baseYDistanceFraction * maxY + baseHeight
+            let yOffsetForDiscs = (CGFloat(discPositionInStack) * discHeight) + 1.0 * (CGFloat)(discPositionInStack + 1)
+            let yPosition = baseYPosition + yOffsetForDiscs
+            let discRect = CGRect(x: xPosition, y: yPosition, width: discWidth, height: discHeight)
+            let node = SKShapeNode(rect: discRect, cornerRadius: GameScene.discCornerRadius)
+            node.fillColor = disc.color
+            self.addChild(node)
+            disc.node = node
+        }
     }
 }
