@@ -9,8 +9,10 @@
 import SpriteKit
 
 class GameScene: SKScene {
-    static let bgColor = UIColor(red: 0.7, green: 0.7, blue: 1.0, alpha: 0.4)
-    static let menuColor = UIColor(red: 0.6, green: 0.8, blue: 1.0, alpha: 1.0)
+    static let buttonTextColor = UIColor.whiteColor()
+    static let buttonPressedColor = UIColor(red: 0.8, green: 0.9, blue: 1.0, alpha: 1.0)
+    static let bgColor = UIColor(red: 0.6, green: 0.8, blue: 1.0, alpha: 1.0)
+    static let menuColor = UIColor(red: 0.7, green: 0.7, blue: 1.0, alpha: 0.4)
     static let menuTopFraction: CGFloat = 0.25
     static let baseXDistanceFraction: CGFloat = 1.0 / 5.0
     static let baseYDistanceFraction: CGFloat = 1.0 / 2.5
@@ -31,6 +33,9 @@ class GameScene: SKScene {
     var newGameLabel: SKLabelNode?
     var startOverLabel: SKLabelNode?
     var messageLabel: SKLabelNode?
+    var viewController: GameViewController?
+    var pressedNode: SKLabelNode?
+    var gameOver = false
     
     class Disc: NSObject {
         var color: UIColor
@@ -70,6 +75,17 @@ class GameScene: SKScene {
         
         for touch in touches {
             let location = touch.locationInNode(self)
+            let node = self.nodeAtPoint(location)
+            if node == self.newGameLabel || node == self.startOverLabel {
+                let labelNode = node as! SKLabelNode
+                labelNode.fontColor = GameScene.buttonPressedColor
+                self.pressedNode = labelNode
+                continue
+            }
+            
+            if (gameOver == true) {
+                continue
+            }
 
             /* Check which stack the touch is on */
             let touchX = location.x
@@ -100,6 +116,33 @@ class GameScene: SKScene {
         }
     }
     
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        for touch in touches {
+            let location = touch.locationInNode(self)
+            let node = self.nodeAtPoint(location)
+            if node == self.newGameLabel && self.pressedNode == self.newGameLabel  {
+                self.viewController!.performSegueWithIdentifier(GameViewController.menuSegueIdentifier, sender: self)
+                continue
+            }
+            else if node == self.startOverLabel && self.pressedNode == self.startOverLabel {
+                self.messageLabel!.text = ""
+                for base in self.bases {
+                    base.node?.removeFromParent()
+                }
+                for disc in self.discs {
+                    disc.node?.removeFromParent()
+                }
+                initializeDiscsForCount(self.discs!.count)
+                setupBases()
+                setupDiscs()
+                continue
+            }
+        }
+        self.pressedNode = nil
+        self.startOverLabel?.fontColor = GameScene.buttonTextColor
+        self.newGameLabel?.fontColor = GameScene.buttonTextColor
+    }
+    
     func initializeDiscsForCount(discCount: Int) {
         let colors = [UIColor.blackColor(), UIColor.orangeColor(), UIColor.blueColor(), UIColor.purpleColor(), UIColor.cyanColor(), UIColor.greenColor(), UIColor.yellowColor(), UIColor.lightGrayColor()]
         var discs = [Disc]()
@@ -116,7 +159,7 @@ class GameScene: SKScene {
         let maxY = CGRectGetMaxY(self.frame)
         let maxX = CGRectGetMaxX(self.frame)
         let menuTopPosition = GameScene.menuTopFraction * maxY
-        let menuRect = CGRect(x: 0.0, y: menuTopPosition, width: maxX, height: maxY - menuTopPosition)
+        let menuRect = CGRect(x: 0.0, y: 0.0, width: maxX, height: menuTopPosition)
         let menuNode = SKShapeNode(rect: menuRect)
         menuNode.fillColor = GameScene.menuColor
         let newGameNode = SKLabelNode(text: "New Game")
@@ -239,6 +282,11 @@ class GameScene: SKScene {
             discToMove.node = newNode
             destBase.discStack.append(discToMove)
             originBase.discStack.removeLast()
+            if (self.bases[2].discStack.count == self.discs.count) {
+                /* Then the game is over */
+                self.messageLabel!.text = "You win!"
+                self.gameOver = true
+            }
         }
     }
 }

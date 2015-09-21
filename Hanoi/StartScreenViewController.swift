@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class StartScreenViewController : UIViewController {
-    static let GAME_SEGUE_IDENTIFIER = "SegueToGame"
+    static let GameSegueIdentifier = "SegueToGame"
     
     @IBOutlet weak var discSlider: UISlider!
     @IBOutlet weak var discNumberLabel: UILabel!
@@ -21,6 +21,8 @@ class StartScreenViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         discSlider.addTarget(self, action: "handleSliderChange", forControlEvents: UIControlEvents.ValueChanged)
+        discSlider.value = Float(self.numberOfDiscs)
+        handleSliderChange()
     }
     
     func handleSliderChange() {
@@ -29,7 +31,7 @@ class StartScreenViewController : UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == StartScreenViewController.GAME_SEGUE_IDENTIFIER {
+        if segue.identifier == StartScreenViewController.GameSegueIdentifier {
             let gvc = segue.destinationViewController as! GameViewController
             gvc.numberOfDiscs = self.numberOfDiscs
         }

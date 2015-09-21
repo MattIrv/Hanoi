@@ -14,8 +14,6 @@
 		34D6CA911BA8B5C9000355BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34D6CA8F1BA8B5C9000355BF /* Main.storyboard */; };
 		34D6CA931BA8B5C9000355BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34D6CA921BA8B5C9000355BF /* Assets.xcassets */; };
 		34D6CA961BA8B5C9000355BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34D6CA941BA8B5C9000355BF /* LaunchScreen.storyboard */; };
-		34D6CAA11BA8B5C9000355BF /* HanoiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D6CAA01BA8B5C9000355BF /* HanoiTests.swift */; };
-		34D6CAAC1BA8B5C9000355BF /* HanoiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D6CAAB1BA8B5C9000355BF /* HanoiUITests.swift */; };
 		34D6CABA1BA8E0C3000355BF /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D6CAB91BA8E0C3000355BF /* StartScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,11 +45,7 @@
 		34D6CA951BA8B5C9000355BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34D6CA971BA8B5C9000355BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34D6CA9C1BA8B5C9000355BF /* HanoiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HanoiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		34D6CAA01BA8B5C9000355BF /* HanoiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HanoiTests.swift; sourceTree = "<group>"; };
-		34D6CAA21BA8B5C9000355BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34D6CAA71BA8B5C9000355BF /* HanoiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HanoiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		34D6CAAB1BA8B5C9000355BF /* HanoiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HanoiUITests.swift; sourceTree = "<group>"; };
-		34D6CAAD1BA8B5C9000355BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34D6CAB91BA8E0C3000355BF /* StartScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,8 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				34D6CA861BA8B5C9000355BF /* Hanoi */,
-				34D6CA9F1BA8B5C9000355BF /* HanoiTests */,
-				34D6CAAA1BA8B5C9000355BF /* HanoiUITests */,
 				34D6CA851BA8B5C9000355BF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -114,24 +106,6 @@
 				34D6CAB91BA8E0C3000355BF /* StartScreenViewController.swift */,
 			);
 			path = Hanoi;
-			sourceTree = "<group>";
-		};
-		34D6CA9F1BA8B5C9000355BF /* HanoiTests */ = {
-			isa = PBXGroup;
-			children = (
-				34D6CAA01BA8B5C9000355BF /* HanoiTests.swift */,
-				34D6CAA21BA8B5C9000355BF /* Info.plist */,
-			);
-			path = HanoiTests;
-			sourceTree = "<group>";
-		};
-		34D6CAAA1BA8B5C9000355BF /* HanoiUITests */ = {
-			isa = PBXGroup;
-			children = (
-				34D6CAAB1BA8B5C9000355BF /* HanoiUITests.swift */,
-				34D6CAAD1BA8B5C9000355BF /* Info.plist */,
-			);
-			path = HanoiUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,7 +250,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34D6CAA11BA8B5C9000355BF /* HanoiTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +257,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34D6CAAC1BA8B5C9000355BF /* HanoiUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +467,7 @@
 				34D6CAB21BA8B5C9000355BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		34D6CAB31BA8B5C9000355BF /* Build configuration list for PBXNativeTarget "HanoiTests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +476,7 @@
 				34D6CAB51BA8B5C9000355BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		34D6CAB61BA8B5C9000355BF /* Build configuration list for PBXNativeTarget "HanoiUITests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +485,7 @@
 				34D6CAB81BA8B5C9000355BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,6 +10,7 @@ import UIKit
 import SpriteKit
 
 class GameViewController: UIViewController {
+    static let menuSegueIdentifier = "SegueToMenu"
     var numberOfDiscs = 4
 
     override func viewDidLoad() {
@@ -17,6 +18,7 @@ class GameViewController: UIViewController {
 
         if let scene = GameScene(fileNamed:"GameScene") {
             scene.initializeDiscsForCount(self.numberOfDiscs)
+            scene.viewController = self
             // Configure the view.
             let skView = self.view as! SKView
             skView.showsFPS = false
@@ -51,5 +53,12 @@ class GameViewController: UIViewController {
 
     override func prefersStatusBarHidden() -> Bool {
         return false
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == GameViewController.menuSegueIdentifier {
+            let ssvc = segue.destinationViewController as! StartScreenViewController
+            ssvc.numberOfDiscs = self.numberOfDiscs
+        }
     }
 }
