@@ -1,5 +1,8 @@
 # Hanoi
-Simple Tower of Hanoi app that demonstrates Sprite Kit, Storyboards, and Swift. 
+Simple Tower of Hanoi app that demonstrates SpriteKit, Storyboards, and Swift.
+
+## About
+This app was created purely in Swift. It uses Apple's Storyboards and SpriteKit framework to present a simple interactive game on iOS devices. To build the app yourself, simply clone this repository and import it as a project in Xcode. It should be able to build out of the box, although you may need to be using the latest developer preview of Xcode.
 
 ## Screenshots
 Start Screen
